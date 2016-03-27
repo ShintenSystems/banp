@@ -4,6 +4,9 @@ require_once('/wamp/www/nobelba/common/SmartySetup.class.php');
 require_once('/wamp/www/nobelba_data/common/DbMgr.php');
 //require('/wamp/www/nobelba/MyLogPHP/MyLogPHP.class.php');
 
+//This is github test by Roshan 2016/03/27 
+
+
 /** 
 session_start();
 
