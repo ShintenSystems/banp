@@ -2,6 +2,7 @@
 require_once('/wamp/www/banp/nobelba_data/common/DbMgr.php');
 
 //SignUp
+//This is test
 
 class MASTERREGISTER
 {
