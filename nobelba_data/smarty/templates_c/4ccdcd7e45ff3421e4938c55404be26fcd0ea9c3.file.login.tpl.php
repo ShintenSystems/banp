@@ -1,4 +1,31 @@
-{include file="header.tpl"}
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-03-27 10:49:32
+         compiled from "\wamp\www\banp\nobelba_data\Smarty\templates\login.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1431056f782044b1c71-98930068%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '4ccdcd7e45ff3421e4938c55404be26fcd0ea9c3' => 
+    array (
+      0 => '\\wamp\\www\\banp\\nobelba_data\\Smarty\\templates\\login.tpl',
+      1 => 1459068557,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1431056f782044b1c71-98930068',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_56f78204634850_45898250',
+  'variables' => 
+  array (
+    'shown_invaliduser' => 0,
+    'is_userregister' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_56f78204634850_45898250')) {function content_56f78204634850_45898250($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
   </br>
  <div class="container">
      <div class="row text-center">
@@ -12,22 +39,22 @@
     
 	 <div id="login"> 
 		<form name="frm_login" action="login.php" method="post"> 
-		{if $shown_invaliduser == 1}	
+		<?php if ($_smarty_tpl->tpl_vars['shown_invaliduser']->value==1) {?>	
 		<div class="alert alert-warning">
 		<strong> Invalid User Name & Password !</strong>
 		</div>
-		{/if}
+		<?php }?>
   
-		{if ($is_userregister == 1)}	
+		<?php if (($_smarty_tpl->tpl_vars['is_userregister']->value==1)) {?>	
 		<div class="alert alert-warning">
 		<strong>User Already Registered! Please login here.</strong> 
 		</div>
-		{elseif ($is_userregister == 2)}
+		<?php } elseif (($_smarty_tpl->tpl_vars['is_userregister']->value==2)) {?>
 		<div class="alert alert-success">
 		<strong>User Register Successfully!</strong> 
 		</div>
-		{else}
-		{/if}
+		<?php } else { ?>
+		<?php }?>
 		
 		<h1>Login to Create Petition</h1>
 		<div class="panel panel-default">
@@ -118,18 +145,28 @@
 	<div class="space-bottom"></div>
     <!--END HOME SECTION -->
     <!--FOOTER SECTION -->
-    {include file="footer.tpl"}
+    <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 	
     <!--END FOOTER SECTION -->
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
     <!-- CORE JQUERY LIBRARY -->
-    <script src="js/jquery.js"></script>
+    <?php echo '<script'; ?>
+ src="js/jquery.js"><?php echo '</script'; ?>
+>
     <!-- CORE BOOTSTRAP LIBRARY -->
-    <script src="js/bootstrap.min.js"></script>
+    <?php echo '<script'; ?>
+ src="js/bootstrap.min.js"><?php echo '</script'; ?>
+>
   	
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <?php echo '<script'; ?>
+ src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'><?php echo '</script'; ?>
+>
 
-    <script src="js/login.js"></script>
+    <?php echo '<script'; ?>
+ src="js/login.js"><?php echo '</script'; ?>
+>
     
   </body>
 </html>
+<?php }} ?>
