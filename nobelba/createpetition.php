@@ -1,8 +1,8 @@
 ﻿<?php
-require_once('/wamp/www/nobelba/common/define.php');
-require_once('/wamp/www/nobelba/common/SmartySetup.class.php');
-require_once('/wamp/www/nobelba_data/common/DbMgr.php');
-//require('/wamp/www/nobelba/MyLogPHP/MyLogPHP.class.php');
+require_once('/wamp/www/banp/nobelba/common/define.php');
+require_once('/wamp/www/banp/nobelba/common/SmartySetup.class.php');
+require_once('/wamp/www/banp/nobelba_data/common/DbMgr.php');
+//require('/wamp/www/banp/nobelba/MyLogPHP/MyLogPHP.class.php');
 
 //This is github test by Roshan 2016/03/27 
 
@@ -11,7 +11,7 @@ require_once('/wamp/www/nobelba_data/common/DbMgr.php');
 session_start();
 
 //require_once('/wamp/www/DemoRest/common/define.php');
-require_once('/wamp/www/nobelba_data/common/DbMgr.php');
+require_once('/wamp/www/banp/nobelba_data/common/DbMgr.php');
 session_start();
 $errorMessage = "";
 $Flag_InvalidUsername =0;

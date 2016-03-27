@@ -1,5 +1,5 @@
 <?php
-require_once('/wamp/www/nobelba_data/common/DbMgr.php');
+require_once('/wamp/www/banp/nobelba_data/common/DbMgr.php');
 
 //SignUp
 

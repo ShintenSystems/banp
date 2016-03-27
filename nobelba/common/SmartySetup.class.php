@@ -1,6 +1,6 @@
 <?php
 
-require_once('/wamp/www/nobelba_data/smarty/libs/Smarty.class.php');
+require_once('/wamp/www/banp/nobelba_data/smarty/libs/Smarty.class.php');
 
 class SmartySetup extends Smarty {
 
