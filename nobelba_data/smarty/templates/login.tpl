@@ -1,4 +1,5 @@
 {include file="header.tpl"}
+<link rel="stylesheet" href="css/login.css">  
   </br>
  <div class="container">
      <div class="row text-center">
@@ -130,6 +131,6 @@
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script src="js/login.js"></script>
-    
+     
   </body>
 </html>
