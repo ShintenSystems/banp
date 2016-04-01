@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-03-27 08:47:01
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-01 17:24:14
          compiled from "\wamp\www\banp\nobelba_data\Smarty\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:107356f781e5923739-07453528%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a6c43c3ea85a60c06e2e5202ea9b9d07d5753fbb' => 
     array (
       0 => '\\wamp\\www\\banp\\nobelba_data\\Smarty\\templates\\header.tpl',
-      1 => 1459052515,
+      1 => 1459521549,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.21-dev',
   'unifunc' => 'content_56f781e5933133_51228884',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_56f781e5933133_51228884')) {function content_56f781e5933133_51228884($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
@@ -43,7 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 	
 	
-    <link rel="stylesheet" href="css/style.css">
+   <!-- -->    <link rel="stylesheet" href="css/style.css">  
 	
 <?php echo '<script'; ?>
  src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"><?php echo '</script'; ?>
@@ -51,7 +51,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
        <?php echo '<script'; ?>
  src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"><?php echo '</script'; ?>
 >
-   <![endif]-->
+   <!--[endif]-->
 
 
    
@@ -70,8 +70,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 >
 
 
+   
+   
+   
+    <!-- For Radio Button Start -->
+   
+   
+ <?php echo '<script'; ?>
+ type="text/javascript" language="JavaScript">
+function radioWithText(d) {
+    document.getElementById('Peace').style.display = "none";
+    document.getElementById('economy').style.display = "none";
+    document.getElementById('anthropology').style.display = "none";
+    document.getElementById(d).style.display='inline'; 
+}
+<?php echo '</script'; ?>
+>
+<!-- For Radio Button End -->
+
+
+   
 </head>
-<body>
+<body >
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">

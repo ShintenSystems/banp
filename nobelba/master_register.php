@@ -42,10 +42,10 @@ function registerusermaster($userexist)
 	}  else {
 	 echo "I am inside Registration";
 	  //If User Does Not Exist then proceed for registration 
-	
+	$activation = md5(uniqid(rand(), true));
 	//Register User Data
-	$sql = "INSERT INTO user_detail(email, password, phone_no) VALUES (
-	'$newemail','$newpassword','$phoneNo')";
+	$sql = "INSERT INTO user_detail(email, password, phone_no,activation) VALUES (
+	'$newemail','$newpassword','$phoneNo','$activation')";
 	
 	try {
 	$dbh = DbMgr::getDB();
@@ -62,7 +62,7 @@ function registerusermaster($userexist)
 	
 	//Send Email for Authentication 
 	require "phpmailer/class.phpmailer.php"; 
-	$Auth_URL = "http://nobelprize.aimjapan.org/authenticate.php/sjeiw7w829290102929";
+	$Auth_URL = "http://localhost:8080/banp/nobelba/authenticate.php?email=".urlencode($newemail)."&key=$activation";
 	// Instantiate Class
 	try {     
     $mail = new PHPMailer();  

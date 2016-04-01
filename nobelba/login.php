@@ -16,7 +16,7 @@ $userregister_flag=0;
 if (isset($_POST["btnlogin"])) {
   if (!empty($_POST['emailid']) && !empty($_POST['password'])) {
 		$emailid = $_POST["emailid"];
-		$sql = 'SELECT EMAIL, PASSWORD,PHONE_NO FROM user_detail WHERE EMAIL = ?';
+		$sql = 'SELECT EMAIL, PASSWORD,PHONE_NO,STATUS FROM user_detail WHERE EMAIL = ?';
 		try {
 		$dbh = DbMgr::getDB();
 		$stmt = $dbh->prepare($sql);
@@ -26,13 +26,13 @@ if (isset($_POST["btnlogin"])) {
 		   exit();
 		}
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        $data =   array($result ['EMAIL'],$result['PASSWORD'],$result['PHONE_NO']);
+        $data =   array($result ['EMAIL'],$result['PASSWORD'],$result['PHONE_NO'],$result['STATUS']);
 		} catch (Exception $e) {
 		  print('Error:'.$e->getMessage());
 		  die();
 	    }
 
-		if (($_POST["password"]  == $result['PASSWORD'] )&& ($_POST["emailid"]  == $result['EMAIL']))  {
+		if (($_POST["password"]  == $result['PASSWORD'] )&& ($_POST["emailid"]  == $result['EMAIL']) && ($result['STATUS']== 1))  {
 		session_regenerate_id(true);
 		$_SESSION["EMAIIL_ID"] = $_POST["emailid"];
 		$_SESSION["PH_NO"] = $result["PHONE_NO"];

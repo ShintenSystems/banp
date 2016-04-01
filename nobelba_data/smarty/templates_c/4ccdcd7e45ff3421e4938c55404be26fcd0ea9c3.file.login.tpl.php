@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-03-27 10:49:32
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-01 17:24:16
          compiled from "\wamp\www\banp\nobelba_data\Smarty\templates\login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1431056f782044b1c71-98930068%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4ccdcd7e45ff3421e4938c55404be26fcd0ea9c3' => 
     array (
       0 => '\\wamp\\www\\banp\\nobelba_data\\Smarty\\templates\\login.tpl',
-      1 => 1459068557,
+      1 => 1459521549,
       2 => 'file',
     ),
   ),
@@ -26,6 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_56f78204634850_45898250')) {function content_56f78204634850_45898250($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
+<link rel="stylesheet" href="css/login.css">  
   </br>
  <div class="container">
      <div class="row text-center">
@@ -166,7 +167,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <?php echo '<script'; ?>
  src="js/login.js"><?php echo '</script'; ?>
 >
-    
+     
   </body>
 </html>
 <?php }} ?>

@@ -22,11 +22,11 @@
 
 	
 	
-    <link rel="stylesheet" href="css/style.css">
+   <!-- -->    <link rel="stylesheet" href="css/style.css">  
 	
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-   <![endif]-->
+   <!--[endif]-->
 
 
    
@@ -41,8 +41,26 @@
    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 
+   
+   
+   
+    <!-- For Radio Button Start -->
+   
+   
+ <script type="text/javascript" language="JavaScript">
+function radioWithText(d) {
+    document.getElementById('Peace').style.display = "none";
+    document.getElementById('economy').style.display = "none";
+    document.getElementById('anthropology').style.display = "none";
+    document.getElementById(d).style.display='inline'; 
+}
+</script>
+<!-- For Radio Button End -->
+
+
+   
 </head>
-<body>
+<body >
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
