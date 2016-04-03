@@ -2,11 +2,12 @@
 require_once('/wamp/www/banp/nobelba/common/define.php');
 require_once('/wamp/www/banp/nobelba/common/SmartySetup.class.php');
 require_once('/wamp/www/banp/nobelba_data/common/DbMgr.php');
+//require_once('/wamp/www/banp/nobelba/login.php');
 //require('/wamp/www/banp/nobelba/MyLogPHP/MyLogPHP.class.php');
 
 //This is github test by Roshan 2016/03/27 
 
-
+session_start();
 /** 
 session_start();
 
@@ -54,9 +55,41 @@ if (isset($_POST["btnlogin"])) {
 
 }
 **/
+//echo $_POST["validate"];
+$check_validation = 0;
+$firstname = "";
+$lastname="";
 
+if(!empty($_POST["validate"])) {
+$check_validation = $_POST["validate"];
+}
+
+if(!empty($_POST["f_name"])) {
+$firstname = $_POST["f_name"];
+}
+
+if(!empty($_POST["l_name"])) {
+$lastname = $_POST["l_name"];
+}
+
+
+//echo  $_SESSION['EMAIIL_ID'];
 $smartyObj = new SmartySetup();
+$smartyObj->assign( 'flgValidation', $check_validation);
+$smartyObj->assign( 'fname', $firstname);
+$smartyObj->assign( 'lname', $lastname);
+$smartyObj->display('createnomination.tpl');
 
+/*
+$_SESSION['EMAIIL_ID'] ="";
+if ($_SESSION['EMAIIL_ID']) {
+$smartyObj = new SmartySetup();
 $smartyObj->display('createpetition.tpl');
-
+} else {
+$smartyObj = new SmartySetup();
+$_SESSION['EMAIIL_ID'] = "";
+$smartyObj->assign( 'shown_invaliduser', 0);
+$smartyObj->assign('is_userregister', 0);
+$smartyObj->display('login.tpl');
+} */
 ?>

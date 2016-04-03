@@ -1,0 +1,74 @@
+{if empty({$smarty.session.EMAIIL_ID})}
+	<i class="fa fa-user fa-fw"></i><i class="fa fa-caret-down"></i>
+{else}
+   <i class="fa fa-user fa-fw"></i>{$smarty.session.EMAIIL_ID}<i class="fa fa-caret-down"></i>
+{/if}
+
+
+    $('#petition-form').validate({
+        rules: {
+            f_name: {
+                minlength: 2,
+                required: true
+            }
+     });
+	 
+	 
+	 
+<script>
+$('.continue').click(function(){
+  $('.nav-tabs > .active').next('li').find('a').trigger('click');
+});
+
+$('.petition').click(function(){
+  $('.nav-tabs > .active').next('li').find('a').trigger('click');
+});
+
+$('.back').click(function(){
+  $('.nav-tabs > .active').prev('li').find('a').trigger('click');
+});
+
+</script>
+
+
+$( document ).ready(function(){
+
+$("#a1").click(function(){
+    window.alert('アラートの表示');
+    $(".nav-tabs a[href='#createNomination']").tab("show")
+	//$('.nav-tabs > .active').next('li').find('a').trigger('click');
+});
+
+});
+
+function disp(){
+	//window.alert('アラートの表示');
+	//$('.nav-tabs > .active').next('li').find('a').trigger('click');
+	$(".nav-tabs li a[href='#createNomination']").tabs("show");
+}
+
+<script>
+$(document).ready(function () {
+
+    $('#petition-form').validate({
+        rules: {
+            f_name: {
+                minlength: 2,
+                required: true
+            }
+    });
+
+});
+</script>
+
+
+$(function(){
+  $("#my-div").show();
+});
+
+$("validate").click(function(){
+ window.alert('アラートの表示');
+ $("#my-div").show();
+});
+
+

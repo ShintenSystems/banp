@@ -1,31 +1,244 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-01 17:25:47
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-02 16:32:09
          compiled from "\wamp\www\banp\nobelba_data\Smarty\templates\createpetition.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2185056f79eb8d3e813-48339938%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:878056ff812d1407a5-80328300%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b9d567cb72e6b78b12647dfbb9830a9bd64f8d85' => 
     array (
       0 => '\\wamp\\www\\banp\\nobelba_data\\Smarty\\templates\\createpetition.tpl',
-      1 => 1459521549,
+      1 => 1459607503,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2185056f79eb8d3e813-48339938',
+  'nocache_hash' => '878056ff812d1407a5-80328300',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_56f79eb8d84d20_46675377',
+  'unifunc' => 'content_56ff812d2ceef2_83900735',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_56f79eb8d84d20_46675377')) {function content_56f79eb8d84d20_46675377($_smarty_tpl) {?>	
+<?php if ($_valid && !is_callable('content_56ff812d2ceef2_83900735')) {function content_56ff812d2ceef2_83900735($_smarty_tpl) {?><!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Nobel Prize to Dr. B.R. Ambedkar</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	
+	
+   <!-- -->    <link rel="stylesheet" href="css/style.css">  
+	
+<?php echo '<script'; ?>
+ src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"><?php echo '</script'; ?>
+>
+       <?php echo '<script'; ?>
+ src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"><?php echo '</script'; ?>
+>
+   <!--[endif]-->
+
+   
+
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css"/>
+<?php echo '<script'; ?>
+ type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"> <?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"><?php echo '</script'; ?>
+>
+   
+    <!-- For Radio Button Start -->
+   
+   
+ <?php echo '<script'; ?>
+ type="text/javascript" language="JavaScript">
+function radioWithText(d) {
+    document.getElementById('Peace').style.display = "none";
+    document.getElementById('economy').style.display = "none";
+    document.getElementById('anthropology').style.display = "none";
+    document.getElementById(d).style.display='inline'; 
+}
+<?php echo '</script'; ?>
+>
+<!-- For Radio Button End -->
+
+<!-- Form Validation Starts -->
+
+<!-- Form Validation End -->
+ <?php echo '<script'; ?>
+ type="text/javascript">
+ $( document ).ready(function(){
+
+$("#a1").click(function(){
+    //window.alert('アラートの表示');
+    //$(".nav-tabs a[href='#createNomination']").tabs("shown")
+	//$('.nav-tabs a[href="#createNomination"]').tab('show');
+	//$('.nav-tabs > .active').next('li').find('a').trigger('click');
+});
+
+})
+  
+ <?php echo '</script'; ?>
+>
 
 
 
+ <!--For Country -->
+<?php echo '<script'; ?>
+ src="js/location.js"><?php echo '</script'; ?>
+> 
+<?php echo '<script'; ?>
+>
+$(document).ready(function() {
+	$("#countries").msDropdown();
+})
+<?php echo '</script'; ?>
+>
 
 
-<?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+ 
+</head>
+<body >
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">Nobel Prize to Dr. B.R. Ambedkar</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+				    <li>
+                        <a href="index.php">Home</a>
+                    </li>
+					 <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dr.Ambedkar<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="full-width.html">Education</a>
+                            </li>
+                            <li>
+                                <a href="sidebar.php">Achievements</a>
+                            </li>
+							 <li>
+                                <a href="sidebar.php">Work</a>
+                            </li>
+
+                        </ul>
+						
+                    </li>					
+					
+					
+					
+					
+                    <li>
+                        <a href="about.php">Our Mission</a>
+                    </li>
+                  <!--  <li>
+                        <a href="services.php">Services</a>
+                    </li> -->
+                    <li> 
+                        <a href="contact.php">Contact us</a>
+                    </li>
+
+					
+					
+					<!--
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="portfolio-1-col.html">1 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-2-col.html">2 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-3-col.html">3 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-4-col.html">4 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-item.html">Single Portfolio Item</a>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="blog-home-1.html">Blog Home 1</a>
+                            </li>
+                            <li>
+                                <a href="blog-home-2.html">Blog Home 2</a>
+                            </li>
+                            <li>
+                                <a href="blog-post.html">Blog Post</a>
+                            </li>
+                        </ul>
+                    </li>
+					
+					<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					<?php ob_start();?><?php echo $_SESSION['EMAIIL_ID'];?>
+<?php $_tmp1=ob_get_clean();?><?php if (empty($_tmp1)) {?>
+					<i class="fa"></i>Login<i class="fa fa-caret-down"></i>
+					<?php } else { ?>
+					<i class="fa fa-user fa-fw"></i><?php echo $_SESSION['EMAIIL_ID'];?>
+<i class="fa fa-caret-down"></i>
+					<ul class="dropdown-menu dropdown-user">
+                        <li class="divider"></li>
+                        <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+					<?php }?>
+                    </a>
+                    
+                    <!-- /.dropdown-user -->
+                </li>
+
+				<!--	<a class="btn btn-primary btn-lg" href="createpetition.php" role="button">Create Petition</a> -->
+                </ul>
+				
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
 
 
     <div class="space-bottom"></div>
@@ -35,30 +248,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	
 	
 	
-	
 	<div class="container tabs-wrap">     <!-- Start tabs-wrap -->        
-	<ul class="nav nav-tabs" role="tablist">
+	<ul id="myTab" class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active">
-      <a href="#intstruction" aria-controls="intstruction" role="tab" data-toggle="tab" aria-expanded="true">Intstruction </a>
-    </li>
-    <li>
-      <a href="#createNomination" aria-controls="createNomination" role="tab" data-toggle="tab" aria-expanded="false">Create Nomination </a>
-    </li>
-    <li>
-      <a href="#confirmNomination" aria-controls="confirmNomination" role="tab" data-toggle="tab" aria-expanded="false">Confirm Nomination</a>
-    </li>
-	<li>
-      <a href="#thanku" aria-controls="thanku" role="tab" data-toggle="tab" aria-expanded="false">Thank You</a>
-    </li>
-  </ul>
-  
-  
-  <div class="tab-content">      <!-- Start tab-content -->        
+	<a href="#intstruction" aria-controls="intstruction" role="tab" data-toggle="tab" aria-expanded="true">Terms of use </a></li>
+    <li><a href="#createNomination" aria-controls="createNomination" role="tab" data-toggle="tab" aria-expanded="false">Create Nomination </a></li>
+    <li><a href="#confirmNomination" aria-controls="confirmNomination" role="tab" data-toggle="tab" aria-expanded="false">Confirm Nomination</a></li>
+	<li><a href="#thanku" aria-controls="thanku" role="tab" data-toggle="tab" aria-expanded="false">Thank You</a></li>
+    </ul>
 	
+	<div class="tab-content">      <!-- Start tab-content -->        
+	<!-- Start intstruction -->   
 	
-<!-- Start intstruction -->   
-	
-	<div role="tabpanel" class="tab-pane active" id="intstruction">
+	<div role="tabpanel" class="tab-pane fade in active" id="intstruction">
      
 	<div class="form-group">
 	<label class="col-xs-3 control-label">Terms of use</label>
@@ -92,8 +294,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   
   </br>
   
-<button  class="btn btn-primary continue" id="btnnext" value="value" disabled>Next</button>
-
+<button  class="btn btn-primary continue" id="btnnext" onClick="disp()" value="value" disabled>Next</button>
+<a class="btn next" id="a1">Continue</a>
   <!--  <a class="btn btn-primary continue" >Next</a> --> 
 	
   </div>   
@@ -105,7 +307,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <!-- Start Create Nomination -->   
   
   
-    <div role="tabpanel" class="tab-pane" id="createNomination">
+    <div role="tabpanel" class="tab-pane fade" id="createNomination">
   
     </br> </br> </br> </br>
    
@@ -118,7 +320,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	  
 			<div class="row">
 				<div class="col-sm-6">
-				  			 
+				  		
 					<div class="form-group">
 								<label class="control-label"> First Name:</label>
 								<div class="input-group">
@@ -346,9 +548,12 @@ Thank You!
 		
   	</div>
 	
- 
- <a class="btn btn-primary back">Go Back</a>
-   <a class="btn btn-primary continue">Next</a>
+         <div class="form-actions">
+			 <a class="btn btn-primary back">Go Back</a>
+			 <a class="btn btn-primary petition">Next</a> 
+			 <button class="btn btn-default petition">Validate</button>
+        </div>
+
   
 
   </div>
@@ -366,7 +571,7 @@ Thank You!
   
  <!-- Start Confirm Nomination -->   
  
-  <div role="tabpanel" class="tab-pane" id="confirmNomination">
+  <div role="tabpanel" class="tab-pane fade" id="confirmNomination">
   
   
   <br>
@@ -416,7 +621,7 @@ Thank You!
   
 	 <!-- Start ThankYou -->   
 	
-	<div role="tabpanel" class="tab-pane" id="thanku">
+	<div role="tabpanel" class="tab-pane fade" id="thanku">
   <br>
    
   <h3>THANK YOU FOR SIGNING THE PETITION!</h3><br>
@@ -441,7 +646,7 @@ Thank You!
 	
 	</div> <!-- End tab-content -->
 	</div> <!-- End tabs-wrap -->
-	
+
 	
 	
 	
@@ -469,43 +674,25 @@ Thank You!
     <!--END HOME SECTION -->
     <!--FOOTER SECTION -->
 
-     <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+  <!--For CheckBox -->
 
-
-  
-<?php echo '<script'; ?>
->
-$('.continue').click(function(){
-  $('.nav-tabs > .active').next('li').find('a').trigger('click');
-});
-$('.back').click(function(){
-  $('.nav-tabs > .active').prev('li').find('a').trigger('click');
-});
-
-<?php echo '</script'; ?>
->
- <!--For Country -->
-<?php echo '<script'; ?>
- src="js/location.js"><?php echo '</script'; ?>
-> 
-<?php echo '<script'; ?>
->
-$(document).ready(function() {
-	$("#countries").msDropdown();
-})
-<?php echo '</script'; ?>
->
   
   
-  
-  
-  
-  
- <!--For CheckBox -->
-  <?php echo '<script'; ?>
+ <?php echo '<script'; ?>
 >
 $("#agree").click(function() {
  $("#btnnext").attr("disabled", !this.checked);
+});
+<?php echo '</script'; ?>
+>
+
+  
+<?php echo '<script'; ?>
+>
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+    });
 });
 <?php echo '</script'; ?>
 >
@@ -516,5 +703,7 @@ $("#agree").click(function() {
 
    
 </body>
+    <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 </html>
 <?php }} ?>

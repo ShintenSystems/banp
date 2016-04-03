@@ -1,27 +1,218 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-01 17:24:14
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-02 15:24:55
          compiled from "\wamp\www\banp\nobelba_data\Smarty\templates\index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1864856f781e552fac5-72975466%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2166956ff80ad42c949-04499979%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5c5ab4b3a6a2d483b5e78f97588606cad50965a4' => 
     array (
       0 => '\\wamp\\www\\banp\\nobelba_data\\Smarty\\templates\\index.tpl',
-      1 => 1459521549,
+      1 => 1459603493,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1864856f781e552fac5-72975466',
+  'nocache_hash' => '2166956ff80ad42c949-04499979',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_56f781e587b782_64255480',
+  'unifunc' => 'content_56ff80ad672a51_32562270',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_56f781e587b782_64255480')) {function content_56f781e587b782_64255480($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_56ff80ad672a51_32562270')) {function content_56ff80ad672a51_32562270($_smarty_tpl) {?><!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Nobel Prize to Dr. B.R. Ambedkar</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	
+	
+   <!-- -->    <link rel="stylesheet" href="css/style.css">  
+	
+<?php echo '<script'; ?>
+ src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"><?php echo '</script'; ?>
+>
+       <?php echo '<script'; ?>
+ src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"><?php echo '</script'; ?>
+>
+   <!--[endif]-->
 
 
+   
+   
+   
+   
+   
+   
+   
+   
+<?php echo '<script'; ?>
+ src="//code.jquery.com/jquery-1.10.2.min.js"><?php echo '</script'; ?>
+>
+   <?php echo '<script'; ?>
+ src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+
+
+   
+   
+   
+    <!-- For Radio Button Start -->
+   
+   
+ <?php echo '<script'; ?>
+ type="text/javascript" language="JavaScript">
+function radioWithText(d) {
+    document.getElementById('Peace').style.display = "none";
+    document.getElementById('economy').style.display = "none";
+    document.getElementById('anthropology').style.display = "none";
+    document.getElementById(d).style.display='inline'; 
+}
+<?php echo '</script'; ?>
+>
+<!-- For Radio Button End -->
+
+
+   
+</head>
+<body >
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">Nobel Prize to Dr. B.R. Ambedkar</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+				    <li>
+                        <a href="index.php">Home</a>
+                    </li>
+					 <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dr.Ambedkar<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="full-width.html">Education</a>
+                            </li>
+                            <li>
+                                <a href="sidebar.php">Achievements</a>
+                            </li>
+							 <li>
+                                <a href="sidebar.php">Work</a>
+                            </li>
+
+                        </ul>
+						
+                    </li>					
+					
+					
+					
+					
+                    <li>
+                        <a href="about.php">Our Mission</a>
+                    </li>
+                  <!--  <li>
+                        <a href="services.php">Services</a>
+                    </li> -->
+                    <li> 
+                        <a href="contact.php">Contact us</a>
+                    </li>
+
+					
+					
+					<!--
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="portfolio-1-col.html">1 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-2-col.html">2 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-3-col.html">3 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-4-col.html">4 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-item.html">Single Portfolio Item</a>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="blog-home-1.html">Blog Home 1</a>
+                            </li>
+                            <li>
+                                <a href="blog-home-2.html">Blog Home 2</a>
+                            </li>
+                            <li>
+                                <a href="blog-post.html">Blog Post</a>
+                            </li>
+                        </ul>
+                    </li>
+					
+					<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="login.php">
+					<?php ob_start();?><?php echo $_SESSION['EMAIIL_ID'];?>
+<?php $_tmp1=ob_get_clean();?><?php if (empty($_tmp1)) {?>
+					<i class="fa fa-user fa-fw"></i>Login to Create Petition<i class="fa fa-caret-down"></i>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="login.php"><i class="fa fa-user fa-fw"></i>Login</a>
+                        </li>
+                    </ul>	
+	
+					<?php } else { ?>
+					   <i class="fa fa-user fa-fw"></i><?php echo $_SESSION['EMAIIL_ID'];?>
+<i class="fa fa-caret-down"></i>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li class="divider"></li>
+                        <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>					   
+					   
+					
+                    </a>
+
+                    <!-- /.dropdown-user -->
+                </li>
+
+					<a class="btn btn-primary btn-lg" href="createpetition.php" role="button">Create Petition</a>
+                </ul>
+				<?php }?>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
     <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
@@ -257,11 +448,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
         <hr>
 
-      <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-
-    </div>
-    <!-- /.container -->
+ <!-- /.container -->
 
     <!-- jQuery -->
     <?php echo '<script'; ?>
@@ -272,6 +459,30 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <?php echo '<script'; ?>
  src="js/bootstrap.min.js"><?php echo '</script'; ?>
 >
+	
+	 <!-- jQuery -->
+    <?php echo '<script'; ?>
+ src="bower_components/jquery/dist/jquery.min.js"><?php echo '</script'; ?>
+>
+
+    <!-- Bootstrap Core JavaScript -->
+    <?php echo '<script'; ?>
+ src="bower_components/bootstrap/dist/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <?php echo '<script'; ?>
+ src="bower_components/metisMenu/dist/metisMenu.min.js"><?php echo '</script'; ?>
+>
+
+    <!-- Morris Charts JavaScript -->
+    <?php echo '<script'; ?>
+ src="bower_components/raphael/raphael-min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="bower_components/morrisjs/morris.min.js"><?php echo '</script'; ?>
+>
+
 
     <!-- Script to Activate the Carousel -->
     <?php echo '<script'; ?>
@@ -280,9 +491,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         interval: 5000 //changes the speed
     })
     <?php echo '</script'; ?>
->
+>		
+		
+		
+		
+ 
+
+    </div>
+   
 
 </body>
+     <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 </html>
 <?php }} ?>

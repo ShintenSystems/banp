@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Nobel Prize to Dr. B.R. Ambedkar</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+  <!--    <link rel="stylesheet" href="css/style.css">  -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css"/>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"> </script>
+
+<style>
+.alert{
+    display: none;
+} 
+</style>
+ 
+</head>
+<body>
+
+
+
+
+<form name="myform" method="POST" action="">
+<div class="container">
+  <h2>Dynamic Tabs</h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#terms">Terms of use</a></li>
+    <li><a href="#createnomination">Create Nomination</a></li>
+    <li><a href="#confirmnomination">Confirm Nomination</a></li>
+    <li><a href="#thankyou">Thank You</a></li>
+  </ul>
+  
+  <div class="tab-content">
+    <div id="terms" class="tab-pane fade in active">
+      <h3>Terms of use</h3>
+      	<div class="form-group">
+		<div class="col-xs-12"> 
+		<div style="border: 1px solid #e5e5e5; height: 200px; overflow: auto; padding: 10px;"> 
+		<p>Lorem ipsum dolor sit amet, veniam numquam has te. No suas nonumes recusabo mea, est ut graeci definitiones.
+		His ne melius vituperata scriptorem, cum paulo copiosae conclusionemque at.
+		Facer inermis ius in, ad brute nominati referrentur vis. Dicat erant sit ex. 
+		Phaedrum imperdiet scribentur vix no, ad latine similique forensibus vel.</p> 
+		<p>Dolore populo vivendum vis eu, mei quaestio liberavisse ex. Electram necessitatibus ut vel, 
+		quo at probatus oportere, molestie conclusionemque pri cu. Brute augue tincidunt vim id,
+		ne munere fierent rationibus mei. Ut pro volutpat praesent qualisque, an iisque scripta intellegebat eam.</p>
+		<p>Mea ea nonumy labores lobortis, duo quaestio antiopam inimicus et. Ea natum solet iisque quo, prodesset mnesarchum ne vim. 
+		Sonet detraxit temporibus no has. Omnium blandit in vim, mea at omnium oblique.</p> <p>Eum ea quidam oportere imperdiet, 
+		facer oportere vituperatoribus eu vix, mea ei iisque legendos hendrerit. Blandit comprehensam eu his, ad eros veniam ridens eum. 
+		Id odio lobortis elaboraret pro. Vix te fabulas partiendo.</p> <p>Natum oportere et qui, vis graeco tincidunt instructior an,
+		autem elitr noster per et. Mea eu mundi qualisque. Quo nemore nusquam vituperata et, mea ut abhorreant deseruisse, cu nostrud postulant
+		dissentias qui. Postea tincidunt vel eu.</p> <p>Ad eos alia inermis nominavi, eum nibh docendi definitionem no. Ius eu stet mucius nonumes, 
+		no mea facilis philosophia necessitatibus. Te eam vidit iisque legendos, vero meliore deserunt ius ea. An qui inimicus inciderint.</p> 
+		</div> 
+		</div> 
+		</div> 
+	    <div class="form-group">
+		  <div class="col-xs-12"> 
+		  <div class="checkbox"> 
+		  <label> <input type="checkbox" name="agree" id="agree" value="agree" /> Agree with the terms and conditions </label>
+		  </div> 
+		  </div> 
+		 </div>
+		<br><br>
+		<a class="btn btn-primary" value="value" id="a1" disabled>Continue</a>
+	  
+    </div>
+  
+    <div id="createnomination" class="tab-pane fade">
+      <h3>Create Nomination</h3>
+		  <div class="col-xs-10 col-md-offset-1">
+		  <div class="col-md-12 " >
+	  	  <div class="row">
+        <div class="alert alert-danger alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Input Error!</Strong> Please Enter All Mandatory Fields
+        </div>
+
+		  
+
+		  <div class="col-sm-6">
+
+			<div class="form-group">
+				<label for="f_name"  class="control-label"> First Name:</label>
+				<div class="input-group">
+				<input type="text" class="form-control" id="f_name" name="f_name"  placeholder="Enter First Name" required>
+				<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+				<div class="help-block with-errors"></div>
+			    </div>
+			</div>
+		  </div>
+		  
+		<div class="col-sm-6">
+
+			<div class="form-group">
+				<label for="l_name"  class="control-label"> Last Name:</label>
+				<div class="input-group">
+				<input type="text" class="form-control" id="l_name" name="l_name"  placeholder="Enter Last Name" required>
+				<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+				<div class="help-block with-errors"></div>
+			    </div>
+			</div>
+		  </div>
+		  
+	
+		</div>
+		
+	
+	  </div> 
+		
+	  <a class="btn btn-primary" id="b1">Back</a>
+	  <input class="btn btn-primary" type="button" onclick="check();" value="Validate" /> <br><br>
+	  <div id="my-div">  <a class="btn btn-success"  id="a2">Confirm Nomination</a> </div>
+	 
+	 
+	 
+     </div>
+	
+	</div>
+
+    <div id="confirmnomination" class="tab-pane fade">
+      <h3>Confirm Nomination</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+	  <a class="btn next" id="b2">Back</a>
+	  
+	   <a class="btn next" id="a3">Continue</a> 
+    </div>
+    <div id="thankyou" class="tab-pane fade">
+      <h3>Thank You</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+	   <a class="btn next" id="b3">Back</a>
+    </div>
+  </div>
+</div>
+</form>
+
+<script>
+function check()
+  {
+   //window.alert('アラートの表示');
+		firstname = document.myform.f_name.value;
+		lastname = document.myform.l_name.value;
+		if(!firstname) {
+			$('.alert').show();
+			$("#my-div").hide();
+			return;
+		}
+		if(!lastname) {
+			$('.alert').show();
+			$("#my-div").hide();
+			return;
+		}
+	
+		$('.alert').hide();
+		//$("#my-validate").hide();
+		$("#my-div").show();
+		//document.myform.submit();
+}
+
+$(document).ready(function(){
+
+
+$(".nav-tabs a").click(function(){
+        //$(this).tab('show');
+		//$('.nav-tabs a[href="#menu2"]').tab('show')
+		//$('.nav-tabs li:eq(3) a').tab('show')
+    });
+});
+$("#a1").click(function(){
+	$('.nav-tabs a[href="#createnomination"]').tab('show');
+	$("#my-div").hide(); 
+	});
+$("#a2").click(function(){
+  $('.nav-tabs a[href="#confirmnomination"]').tab('show');
+  document.myform.submit();
+});
+
+$("#a3").click(function(){
+	$('.nav-tabs a[href="#thankyou"]').tab('show')
+});
+$("#b1").click(function(){
+	$('.nav-tabs a[href="#terms"]').tab('show')
+	//$($('.my-div').get(0)).show();
+	//$("#my-div").show();  
+	
+});
+$("#b2").click(function(){
+	$('.nav-tabs a[href="#createnomination"]').tab('show')
+});
+$("#b3").click(function(){
+	$('.nav-tabs a[href="#confirmnomination"]').tab('show')
+});
+
+$("#agree").click(function() {
+ $("#a1").attr("disabled", !this.checked);
+});
+
+
+</script>
+
+
+</body>
+</html>

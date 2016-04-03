@@ -148,6 +148,27 @@ function radioWithText(d) {
                             </li>
                         </ul>
                     </li>
+					
+					<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					  {if empty({$smarty.session.EMAIIL_ID})}
+						<i class="fa fa-user fa-fw"></i><i class="fa fa-caret-down"></i>
+					  {else}
+					  <i class="fa fa-user fa-fw"></i>{$smarty.session.EMAIIL_ID}<i class="fa fa-caret-down"></i>
+					  <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+					  {/if}
+                    </a>
+                    
+                    <!-- /.dropdown-user -->
+                </li>
 
 					<a class="btn btn-primary btn-lg" href="login.php" role="button">Create Petition</a>
                 </ul>
