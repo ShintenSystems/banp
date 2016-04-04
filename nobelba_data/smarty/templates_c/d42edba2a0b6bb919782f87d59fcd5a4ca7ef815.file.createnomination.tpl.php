@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-03 18:31:12
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-04 17:29:35
          compiled from "\wamp\www\banp\nobelba_data\Smarty\templates\createnomination.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:302285700b481003169-96525407%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd42edba2a0b6bb919782f87d59fcd5a4ca7ef815' => 
     array (
       0 => '\\wamp\\www\\banp\\nobelba_data\\Smarty\\templates\\createnomination.tpl',
-      1 => 1459701067,
+      1 => 1459783320,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'flgValidation' => 0,
     'fname' => 0,
     'lname' => 0,
+    'email' => 0,
+    'phno' => 0,
+    'country' => 0,
+    'state' => 0,
+    'city' => 0,
+    'qualifi' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -61,7 +67,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <style>
 .alert{
     display: none;
-} 
+}
+
+.notvalid { color: red; }
+
+.notvalidinput { border-color:red;}
+
+ 
 </style>
 <?php echo '<script'; ?>
  language="javascript"> 
@@ -111,6 +123,23 @@ $(document).ready(function() {
 })
 <?php echo '</script'; ?>
 >
+
+
+
+ <!-- For Radio Button Start -->
+   
+   
+ <?php echo '<script'; ?>
+ type="text/javascript" language="JavaScript">
+function radioWithText(d) {
+    document.getElementById('Peace').style.display = "none";
+    document.getElementById('economy').style.display = "none";
+    document.getElementById('anthropology').style.display = "none";
+    document.getElementById(d).style.display='inline'; 
+}
+<?php echo '</script'; ?>
+>
+<!-- For Radio Button End -->
 
 </head>
 <body onLoad="loadValue()" onUnload="unloadBye()">
@@ -291,9 +320,15 @@ $(document).ready(function() {
 		  <div class="col-xs-10 col-md-offset-1">
 		  <div class="col-md-12 " >
 	  	  <div class="row">
-        <div class="alert alert-danger alert-dismissable">
+        
+		<div class="alert alert-danger alert-dismissable"  id="cert-error">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
             <strong>Input Error!</Strong> Please Enter All Mandatory Fields
+        </div>
+		
+		<div class="alert alert-danger alert-dismissable"  id="cert-error1">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Last Name!</Strong> Please Enter All Mandatory Fields
         </div>
 
 		  
@@ -303,7 +338,7 @@ $(document).ready(function() {
 			<div class="form-group">
 				<label for="f_name"  class="control-label"> First Name:</label>
 				<div class="input-group">
-				<input type="text" class="form-control" id="f_name" name="f_name"  placeholder="Enter First Name" required>
+				<input type="text" class="form-control"  id="f_name" name="f_name"  placeholder="Enter First Name" required>
 				<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
 				<div class="help-block with-errors"></div>
 			    </div>
@@ -321,21 +356,184 @@ $(document).ready(function() {
 			    </div>
 			</div>
 		  </div>
+		<div class="col-sm-6">
+				  			 
+					<div class="form-group">
+						<div class="control-label">
+								<label for="Inputver">Email Address:</label>
+							<div class="input-group">
+								<input  type="text" class="form-control" id="email_id" name="email_id" value='<?php echo $_SESSION['EMAIIL_ID'];?>
+'  placeholder="Enter Email Address" required>
+								<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+							<div class="help-block with-errors"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-6">
+					<div class="form-group">
+							<label class="control-label"> Phone No:</label>
+						<div class="input-group">
+							<input type="text" class="form-control" id="ph_no" name="ph_no" value='<?php echo $_SESSION['PH_NO'];?>
+'  placeholder="Enter Phone No" required>
+							<span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
+						<div class="help-block with-errors"></div>
+						</div>
+					</div>
+				</div>
+		
+		<div class="col-sm-6">
+				  			 
+					<div class="form-group">
+							<label class="control-label"> Country:</label>
+						<div class="input-group">
+							<select name="country" class="form-control countries" id="countryId" required="required">
+								<option value="">Select Country</option>
+							</select>
+								<span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span>
+						<div class="help-block with-errors"></div>
+						</div>
+					</div>
+	
+				</div>
+				
+				<div class="col-sm-6">
+					<div class="form-group">
+							<label class="control-label"> State:</label>
+						<div class="input-group">
+								<select name="state" class="form-control states" id="stateId" required="required">
+									<option value="">Select State</option>
+								</select>
+								<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+						<div class="help-block with-errors"></div>
+						</div>
+					</div>
+				</div>
+				
+		<div class="col-sm-6">
+				  			 
+					<div class="form-group">
+							<label class="control-label"> City:</label>
+						<div class="input-group">
+								<select name="city" class="form-control cities" id="cityId" required="required">
+									<option value="">Select City</option>
+								</select>
+								<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+						<div class="help-block with-errors"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-6">
+					
+					<div class="form-group">
+							<label class="control-label"> Qualification:</label>
+						<div class="input-group">
+							<input type="text" class="form-control" id="quali_name" name="quali_name"  placeholder="Enter Qualification" required>
+							<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+						<div class="help-block with-errors"></div>
+						</div>
+					</div>
+				</div>
+         
+		<div class="col-sm-4">
+		 	<div class="radio-inline">
+			<label>
+				<input name="radioGroup" id="radio1" value="option1" type="radio" onclick="javascript:radioWithText('Peace')" checked="checked" >For Peace
+		   	</label>
+			</div>		 
+		</div>
+				
+				<div class="col-sm-4">
+					<div class="radio-inline">
+						<label >
+							<input name="radioGroup" id="radio1" value="option2"  type="radio" onclick="javascript:radioWithText('economy')" unchecked>For economy
+						</label>
+					</div>	
+				</div>
+				<div class="col-sm-4">
+					<div class="radio-inline">
+						<label >
+							<input name="radioGroup" id="radio1" value="option3" type="radio" onclick="javascript:radioWithText('anthropology')" unchecked >For anthropology
+						</label>
+					</div>	
+					
+				</div>
+		
+		
+	
+<textarea class="form-control" rows="13" id="Peace" style="display:visible;" >
+		
+
+Norwegian Nobel Committee
+HenrikIbsen Gate 51, N-o255
+Oslo, Norway
+
+Dear Nobel Committee Members,
+
+					I am writing to nominate Dr. B. R. Ambedkar For the Nobel Prize in anthropology, He was the principal architect of the Constitution of India. He was an Indian jurist, economist, politician and social reformer who inspired the Modern Buddhist Movement and campaigned against social discrimination against Untouchables (Dalits), while also supporting the rights of women and labour. Ambedkar was a prolific student, earning a law degree and various doctorates from Columbia University and the London School of Economics, and gained a reputation as a scholar for his research in law, economics and political science. In his early career he was an economist, professor, and lawyer. His later life was marked by his political activities; he became involved in campaigning and negotiations for India's independence, publishing journals advocating political rights and social freedom for Dalits, and contributing significantly to the establishment of the state of India. In 1956 he converted to Buddhism, initiating mass conversions of Dalits.
+
+					In 1990, the Bharat Ratna, India's highest civilian award, was posthumously conferred upon Ambedkar. Ambedkar's legacy includes numerous memorials and depictions in popular culture.
+
+					I respectfully nominate Dr. B. R. Ambedkar, for the 2017 Nobel Prize in anthropology. Because of his impact on a india threatened by the corrupting power of untouchability, he is worthy candidates for this coveted and cherished prize. 
+					
+Sincerely,
+</textarea>
+
+
+
+
+<textarea class="form-control" rows="13" id="economy" style="display:none;" >
+
+
+Norwegian Nobel Committee
+HenrikIbsen Gate 51, N-o255
+Oslo, Norway
+
+Dear Nobel Committee Members,
+
+					I am writing to nominate Dr. B. R. Ambedkar For the Nobel Prize in economy, He was the principal architect of the Constitution of India. He was an Indian jurist, economist, politician and social reformer who inspired the Modern Buddhist Movement and campaigned against social discrimination against Untouchables (Dalits), while also supporting the rights of women and labour. Ambedkar was a prolific student, earning a law degree and various doctorates from Columbia University and the London School of Economics, and gained a reputation as a scholar for his research in law, economics and political science. In his early career he was an economist, professor, and lawyer. His later life was marked by his political activities; he became involved in campaigning and negotiations for India's independence, publishing journals advocating political rights and social freedom for Dalits, and contributing significantly to the establishment of the state of India. In 1956 he converted to Buddhism, initiating mass conversions of Dalits.
+
+					In 1990, the Bharat Ratna, India's highest civilian award, was posthumously conferred upon Ambedkar. Ambedkar's legacy includes numerous memorials and depictions in popular culture.
+
+					I respectfully nominate Dr. B. R. Ambedkar, for the 2017 Nobel Economy Prize. Because of his impact on a india threatened by the corrupting power of untouchability, he is worthy candidates for this coveted and cherished prize. 
+						
+Sincerely,
+</textarea>
+
+
+
+
+<textarea class="form-control" rows="13" id="anthropology" style="display:none;">
+
+Dear Nobel Committee
+
+					My name is Archit Wankhede and i want to nominate Mr. Dr. Ambedkar for Nobel Prize For his work in  Anthropology. I request to  take further step to owner him with the prize due to his work done in the field.
+
+
+
+Thank You!
+</textarea>
+
+
+
+
 		  
 
 		</div>
+	<br>	
+	  <label class="control-label"> Sign Here:</label>	 
+	  <div id="signature"  style="color:#0D12E0;background-color:#F2DEDE"></div>  
+	  <input type="hidden" name="hdnSignature" id="hdnSignature" />
 
-		 
-		  <div id="signature" style="color:#0D12E0"></div>  
-
-	
+	  
 	  </div> 
+	  </br> </br> <div class="space-bottom"></div>
 	  <input type="hidden" name="validate" id="validate">
 	  <a class="btn btn-primary" id="b1">Back</a>
 	  <input class="btn btn-primary" type="button" onclick="check();" value="Validate" /> <br><br>
 	  <div id="my-div">  <a class="btn btn-success"  id="a2">Confirm Nomination</a> </div>
-	 
-	 
 	 
      </div>
 	
@@ -347,15 +545,23 @@ $(document).ready(function() {
 
 	  <?php echo $_smarty_tpl->tpl_vars['lname']->value;?>
 
-	  	   
+	  <?php echo $_smarty_tpl->tpl_vars['email']->value;?>
+
+	  <?php echo $_smarty_tpl->tpl_vars['phno']->value;?>
+	  
+	  <?php echo $_smarty_tpl->tpl_vars['country']->value;?>
+
+	  <?php echo $_smarty_tpl->tpl_vars['state']->value;?>
+
+	  <?php echo $_smarty_tpl->tpl_vars['city']->value;?>
+
+	  <?php echo $_smarty_tpl->tpl_vars['qualifi']->value;?>
+
       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
 	  
 	  	  
 
 	  <div id="signature_confirm"></div> 
-	  
-	  
-	  
 	  
 	  
 	  <a class="btn next" id="b2">Back</a>
@@ -375,38 +581,72 @@ $(document).ready(function() {
 >
 function check()
   {
+
+ 
    //window.alert('アラートの表示');
 		firstname = document.myform.f_name.value;
 		lastname = document.myform.l_name.value;
+		emailid = document.myform.email_id.value;
+		phno = document.myform.ph_no.value;
+		country = document.myform.country.value;
+		state = document.myform.state.value;
+		city = document.myform.city.value;
+		qulification = document.myform.quali_name.value;
+		signatureh = document.myform.hdnSignature.value;
 		if(!firstname) {
+		    $(".alert").addClass("in");
+            $("#cert-error").show();
+			//$('.alert').show();
+			$("#my-div").hide();
+			return;
+		}
+		else if(!lastname) {
+		 $(".alert").addClass("in");
+            $("#cert-error1").show();
+			//$('.alert').show();
+			$("#my-div").hide();
+			return;
+		}
+		else if(!emailid) {
 			$('.alert').show();
 			$("#my-div").hide();
 			return;
 		}
-		if(!lastname) {
+		else if(!phno) {
 			$('.alert').show();
 			$("#my-div").hide();
 			return;
 		}
-	
+		else if(!country) {
+			$('.alert').show();
+			$("#my-div").hide();
+			return;
+		}
+		else if(!state) {
+			$('.alert').show();
+			$("#my-div").hide();
+			return;
+		}
+		else if(!city) {
+			$('.alert').show();
+			$("#my-div").hide();
+			return;
+		}
+		else if(!qulification) {
+			$('.alert').show();
+			$("#my-div").hide();
+			return;
+		}
+
+		else {
 		$('.alert').hide();
-		//$("#my-validate").hide();
 		$("#my-div").show();
-		//document.myform.submit();
-		
-		//Signature 
-		//var datapair = $('#signature').jSignature("getData","svgbase64");	
-		//alert(datapair);
-		//var datastr="data:" + datapair.join(",");
-		//$("#signature").jSignature("reset");
-		//alert('should be cleared');
-		//$("#signature").jSignature("importData",datastr);
+		}
 }
 
 $(document).ready(function(){
 
-//$("#signature").jSignature();
-
+ 
 $(".nav-tabs a").click(function(){
         //$(this).tab('show');
 		//$('.nav-tabs a[href="#menu2"]').tab('show')
@@ -419,6 +659,10 @@ $("#a1").click(function(){
 	});
 $("#a2").click(function(){
   //$('.nav-tabs a[href="#confirmnomination"]').tab('show');
+  var $sigdiv = $("#signature");
+  $sigdiv.jSignature();// inits the jSignature widget.
+  var datapair = $sigdiv.jSignature("getData", "image");
+  $('#hdnSignature').val(datapair[1]);
   document.myform.validate.value = 1;
   document.myform.submit();
 });
@@ -428,8 +672,6 @@ $("#a3").click(function(){
 });
 $("#b1").click(function(){
 	$('.nav-tabs a[href="#terms"]').tab('show')
-	//$($('.my-div').get(0)).show();
-	//$("#my-div").show();  
 	
 });
 $("#b2").click(function(){
@@ -447,6 +689,18 @@ $("#agree").click(function() {
 <?php echo '</script'; ?>
 >
 
+<!--For Country -->
+<?php echo '<script'; ?>
+ src="js/location.js"><?php echo '</script'; ?>
+> 
+<?php echo '<script'; ?>
+>
+$(document).ready(function() {
+	$("#countries").msDropdown();
+})
+<?php echo '</script'; ?>
+>
+  
 
 </body>
 </html>

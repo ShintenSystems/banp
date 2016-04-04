@@ -56,10 +56,19 @@ if (isset($_POST["btnlogin"])) {
 }
 **/
 //echo $_POST["validate"];
+
+
 $check_validation = 0;
 $firstname = "";
 $lastname="";
-
+$emailid="";
+$phoneno="";
+$country="";
+$state="";
+$city="";
+$qualification="";
+$sign = '';
+$filepath = "";
 if(!empty($_POST["validate"])) {
 $check_validation = $_POST["validate"];
 }
@@ -71,6 +80,33 @@ $firstname = $_POST["f_name"];
 if(!empty($_POST["l_name"])) {
 $lastname = $_POST["l_name"];
 }
+if(!empty($_POST["email_id"])) {
+$emailid = $_POST["email_id"];
+}
+if(!empty($_POST["ph_no"])) {
+$phoneno = $_POST["ph_no"];
+}
+if(!empty($_POST["country"])) {
+$country = $_POST["country"];
+}
+if(!empty($_POST["state"])) {
+$state = $_POST["state"];
+}
+if(!empty($_POST["city"])) {
+$city = $_POST["city"];
+}
+if(!empty($_POST["quali_name"])) {
+$qualification = $_POST["quali_name"];
+}
+$filepath ="SignImages/" .$firstname."_" .$lastname. ".png";
+
+if(isset($_POST['hdnSignature'])){
+ $sign = $_POST['hdnSignature'];
+ $path = $filepath;
+ $sign = base64_decode($sign); //convert base64
+ file_put_contents($path, $sign); //save to file
+}
+
 
 
 //echo  $_SESSION['EMAIIL_ID'];
@@ -78,6 +114,13 @@ $smartyObj = new SmartySetup();
 $smartyObj->assign( 'flgValidation', $check_validation);
 $smartyObj->assign( 'fname', $firstname);
 $smartyObj->assign( 'lname', $lastname);
+$smartyObj->assign( 'email', $emailid);
+$smartyObj->assign( 'phno', $phoneno);
+$smartyObj->assign( 'country', $country);
+$smartyObj->assign( 'state', $state);
+$smartyObj->assign( 'city', $city);
+$smartyObj->assign( 'qualifi', $qualification);
+$smartyObj->assign( '$digitalsign', $sign);
 $smartyObj->display('createnomination.tpl');
 
 /*
