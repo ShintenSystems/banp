@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-04 17:29:35
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-07 11:17:47
          compiled from "\wamp\www\banp\nobelba_data\Smarty\templates\createnomination.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:302285700b481003169-96525407%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd42edba2a0b6bb919782f87d59fcd5a4ca7ef815' => 
     array (
       0 => '\\wamp\\www\\banp\\nobelba_data\\Smarty\\templates\\createnomination.tpl',
-      1 => 1459783320,
+      1 => 1460020664,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'flgValidation' => 0,
-    'fname' => 0,
-    'lname' => 0,
     'email' => 0,
     'phno' => 0,
     'country' => 0,
     'state' => 0,
     'city' => 0,
     'qualifi' => 0,
+    'msg' => 0,
+    'signpath' => 0,
+    'fname' => 0,
+    'lname' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -463,7 +465,7 @@ function radioWithText(d) {
 		
 		
 	
-<textarea class="form-control" rows="13" id="Peace" style="display:visible;" >
+<textarea class="form-control" rows="13" id="Peace" name="comment" style="display:visible;" >
 		
 
 Norwegian Nobel Committee
@@ -484,7 +486,7 @@ Sincerely,
 
 
 
-<textarea class="form-control" rows="13" id="economy" style="display:none;" >
+<textarea class="form-control" rows="13" name="comment" id="economy" style="display:none;" >
 
 
 Norwegian Nobel Committee
@@ -505,7 +507,7 @@ Sincerely,
 
 
 
-<textarea class="form-control" rows="13" id="anthropology" style="display:none;">
+<textarea class="form-control" rows="13" name="comment" id="anthropology" style="display:none;">
 
 Dear Nobel Committee
 
@@ -541,22 +543,29 @@ Thank You!
 
     <div id="confirmnomination" class="tab-pane fade">
       <h3>Confirm Nomination</h3>
+	  
+	  <?php echo $_smarty_tpl->tpl_vars['email']->value;?>
+<br>
+	  <?php echo $_smarty_tpl->tpl_vars['phno']->value;?>
+ <br>
+	  <?php echo $_smarty_tpl->tpl_vars['country']->value;?>
+<br>
+	  <?php echo $_smarty_tpl->tpl_vars['state']->value;?>
+<br>
+	  <?php echo $_smarty_tpl->tpl_vars['city']->value;?>
+<br>
+	  <?php echo $_smarty_tpl->tpl_vars['qualifi']->value;?>
+<br>
+	  <?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+<br>
+
+	  <img src="<?php echo $_smarty_tpl->tpl_vars['signpath']->value;?>
+" height="200" width="300"/><br>
 	  <?php echo $_smarty_tpl->tpl_vars['fname']->value;?>
 
 	  <?php echo $_smarty_tpl->tpl_vars['lname']->value;?>
-
-	  <?php echo $_smarty_tpl->tpl_vars['email']->value;?>
-
-	  <?php echo $_smarty_tpl->tpl_vars['phno']->value;?>
-	  
-	  <?php echo $_smarty_tpl->tpl_vars['country']->value;?>
-
-	  <?php echo $_smarty_tpl->tpl_vars['state']->value;?>
-
-	  <?php echo $_smarty_tpl->tpl_vars['city']->value;?>
-
-	  <?php echo $_smarty_tpl->tpl_vars['qualifi']->value;?>
-
+<br>
+	 
       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
 	  
 	  	  

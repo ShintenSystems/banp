@@ -57,7 +57,7 @@ if (isset($_POST["btnlogin"])) {
 **/
 //echo $_POST["validate"];
 
-
+$path="";
 $check_validation = 0;
 $firstname = "";
 $lastname="";
@@ -69,6 +69,11 @@ $city="";
 $qualification="";
 $sign = '';
 $filepath = "";
+$message="";
+
+if (isset($_POST["validate"])) {
+
+
 if(!empty($_POST["validate"])) {
 $check_validation = $_POST["validate"];
 }
@@ -98,18 +103,46 @@ $city = $_POST["city"];
 if(!empty($_POST["quali_name"])) {
 $qualification = $_POST["quali_name"];
 }
+
+
 $filepath ="SignImages/" .$firstname."_" .$lastname. ".png";
 
+
+
+
 if(isset($_POST['hdnSignature'])){
+	
  $sign = $_POST['hdnSignature'];
  $path = $filepath;
  $sign = base64_decode($sign); //convert base64
  file_put_contents($path, $sign); //save to file
 }
 
+if(!empty($_POST["comment"])) {
+$message = $_POST["comment"];
+}
 
 
-//echo  $_SESSION['EMAIIL_ID'];
+$updsql = "UPDATE user_detail SET fname='$firstname', lname='$lastname', country='$country',state='$state',city='$city',qualification='$qualification',comment='$message',digital_sign='$path' WHERE email='$emailid'";
+	
+	
+	try {
+	$dbhupd = DbMgr::getDB();
+	$stmtupd = $dbhupd->prepare($updsql);
+	$retupd = $stmtupd->execute();
+        if (!$retupd) {
+          print("Error in Registration");
+          exit();
+        }
+
+    } catch (Exception $e) {
+	print('Error:'.$e->getMessage());
+       die();
+    }
+
+}
+
+
 $smartyObj = new SmartySetup();
 $smartyObj->assign( 'flgValidation', $check_validation);
 $smartyObj->assign( 'fname', $firstname);
@@ -120,7 +153,9 @@ $smartyObj->assign( 'country', $country);
 $smartyObj->assign( 'state', $state);
 $smartyObj->assign( 'city', $city);
 $smartyObj->assign( 'qualifi', $qualification);
-$smartyObj->assign( '$digitalsign', $sign);
+//$smartyObj->assign( '$digitalsign', $sign);
+$smartyObj->assign( 'signpath', $path);
+$smartyObj->assign( 'msg', $message);
 $smartyObj->display('createnomination.tpl');
 
 /*

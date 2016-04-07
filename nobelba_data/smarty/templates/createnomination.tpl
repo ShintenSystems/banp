@@ -407,7 +407,7 @@ function radioWithText(d) {
 		
 		
 	
-<textarea class="form-control" rows="13" id="Peace" style="display:visible;" >
+<textarea class="form-control" rows="13" id="Peace" name="comment" style="display:visible;" >
 		
 
 Norwegian Nobel Committee
@@ -428,7 +428,7 @@ Sincerely,
 
 
 
-<textarea class="form-control" rows="13" id="economy" style="display:none;" >
+<textarea class="form-control" rows="13" name="comment" id="economy" style="display:none;" >
 
 
 Norwegian Nobel Committee
@@ -449,7 +449,7 @@ Sincerely,
 
 
 
-<textarea class="form-control" rows="13" id="anthropology" style="display:none;">
+<textarea class="form-control" rows="13" name="comment" id="anthropology" style="display:none;">
 
 Dear Nobel Committee
 
@@ -485,14 +485,19 @@ Thank You!
 
     <div id="confirmnomination" class="tab-pane fade">
       <h3>Confirm Nomination</h3>
+	  
+	  {$email}<br>
+	  {$phno} <br>
+	  {$country}<br>
+	  {$state}<br>
+	  {$city}<br>
+	  {$qualifi}<br>
+	  {$msg}<br>
+
+	  <img src="{$signpath}" height="200" width="300"/><br>
 	  {$fname}
-	  {$lname}
-	  {$email}
-	  {$phno}	  
-	  {$country}
-	  {$state}
-	  {$city}
-	  {$qualifi}
+	  {$lname}<br>
+	 
       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
 	  
 	  	  
