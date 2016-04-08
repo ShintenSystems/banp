@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-06 15:54:55
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-07 15:22:40
          compiled from "\wamp\www\banp\nobelba_data\Smarty\templates\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2166956ff80ad42c949-04499979%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5c5ab4b3a6a2d483b5e78f97588606cad50965a4' => 
     array (
       0 => '\\wamp\\www\\banp\\nobelba_data\\Smarty\\templates\\index.tpl',
-      1 => 1459950680,
+      1 => 1460035356,
       2 => 'file',
     ),
   ),
@@ -41,7 +41,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-	
+
 	
    <!-- -->    <link rel="stylesheet" href="css/style.css">  
 	
@@ -60,7 +60,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
    
    
    
-   
+ <?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="http://code.highcharts.com/highcharts.js"><?php echo '</script'; ?>
+>  
    
 <?php echo '<script'; ?>
  src="//code.jquery.com/jquery-1.10.2.min.js"><?php echo '</script'; ?>
@@ -74,7 +79,39 @@ $_valid = $_smarty_tpl->decodeProperties(array (
    
    
     <!-- For Radio Button Start -->
-   
+
+<?php echo '<script'; ?>
+ type="text/javascript">
+$(function () {
+    $('#graphcontainer').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Fruit Consumption'
+        },
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit eaten'
+            }
+        },
+        series: [{
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
+        }],
+    });
+});
+
+<?php echo '</script'; ?>
+>	
+
+	
    
  <?php echo '<script'; ?>
  type="text/javascript" language="JavaScript">
@@ -84,6 +121,10 @@ function radioWithText(d) {
     document.getElementById('anthropology').style.display = "none";
     document.getElementById(d).style.display='inline'; 
 }
+
+
+
+
 <?php echo '</script'; ?>
 >
 <!-- For Radio Button End -->
@@ -414,17 +455,17 @@ function radioWithText(d) {
                 <h2 class="page-header">Our Mission</h2>
             </div>
             <div class="col-md-6">
-                <p>The Modern Business template by Start Bootstrap includes:</p>
-                <ul>
-                    <li><strong>Bootstrap v3.2.0</strong>
-                    </li>
-                    <li>jQuery v1.11.0</li>
-                    <li>Font Awesome v4.1.0</li>
-                    <li>Working PHP contact form with validation</li>
-                    <li>Unstyled page elements for easy customization</li>
-                    <li>17 HTML pages</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+			<?php echo '<script'; ?>
+ src="https://code.highcharts.com/highcharts.js"><?php echo '</script'; ?>
+>
+			<?php echo '<script'; ?>
+ src="https://code.highcharts.com/modules/exporting.js"><?php echo '</script'; ?>
+>
+			<div id="graphcontainer" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+             
+			   
+			   
+			   
             </div>
             <div class="col-md-6">
                 <img class="img-responsive" src="http://placehold.it/700x450" alt="">
@@ -483,6 +524,9 @@ function radioWithText(d) {
  src="bower_components/morrisjs/morris.min.js"><?php echo '</script'; ?>
 >
 
+	
+	
+	
 
     <!-- Script to Activate the Carousel -->
     <?php echo '<script'; ?>

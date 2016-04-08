@@ -20,7 +20,7 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-	
+
 	
    <!-- -->    <link rel="stylesheet" href="css/style.css">  
 	
@@ -35,7 +35,8 @@
    
    
    
-   
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>  
    
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -45,7 +46,37 @@
    
    
     <!-- For Radio Button Start -->
-   
+
+<script type="text/javascript">
+$(function () {
+    $('#graphcontainer').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Fruit Consumption'
+        },
+        xAxis: {
+            categories: ['Apples', 'Bananas', 'Oranges']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit eaten'
+            }
+        },
+        series: [{
+            name: 'Jane',
+            data: [1, 0, 4]
+        }, {
+            name: 'John',
+            data: [5, 7, 3]
+        }],
+    });
+});
+
+</script>	
+
+	
    
  <script type="text/javascript" language="JavaScript">
 function radioWithText(d) {
@@ -54,6 +85,10 @@ function radioWithText(d) {
     document.getElementById('anthropology').style.display = "none";
     document.getElementById(d).style.display='inline'; 
 }
+
+
+
+
 </script>
 <!-- For Radio Button End -->
 
@@ -381,17 +416,13 @@ function radioWithText(d) {
                 <h2 class="page-header">Our Mission</h2>
             </div>
             <div class="col-md-6">
-                <p>The Modern Business template by Start Bootstrap includes:</p>
-                <ul>
-                    <li><strong>Bootstrap v3.2.0</strong>
-                    </li>
-                    <li>jQuery v1.11.0</li>
-                    <li>Font Awesome v4.1.0</li>
-                    <li>Working PHP contact form with validation</li>
-                    <li>Unstyled page elements for easy customization</li>
-                    <li>17 HTML pages</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+			<script src="https://code.highcharts.com/highcharts.js"></script>
+			<script src="https://code.highcharts.com/modules/exporting.js"></script>
+			<div id="graphcontainer" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+             
+			   
+			   
+			   
             </div>
             <div class="col-md-6">
                 <img class="img-responsive" src="http://placehold.it/700x450" alt="">
@@ -436,6 +467,9 @@ function radioWithText(d) {
     <script src="bower_components/raphael/raphael-min.js"></script>
     <script src="bower_components/morrisjs/morris.min.js"></script>
 
+	
+	
+	
 
     <!-- Script to Activate the Carousel -->
     <script>

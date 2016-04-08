@@ -3,7 +3,7 @@ class DbMgr {
 	public static function getDB() {
 		$dsn = 'mysql:dbname=petition;host=localhost';
 		$user = 'root';
-		$password = '';
+		$password = 'shinten';
 		
 		try{
 			$dbh = new PDO($dsn, $user, $password,array(PDO::ATTR_PERSISTENT => true));
