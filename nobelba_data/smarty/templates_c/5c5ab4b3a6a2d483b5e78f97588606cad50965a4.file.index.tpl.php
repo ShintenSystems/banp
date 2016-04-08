@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-07 15:22:40
+=======
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-08 11:46:47
+>>>>>>> origin/Dev-Branch
          compiled from "\wamp\www\banp\nobelba_data\Smarty\templates\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2166956ff80ad42c949-04499979%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +11,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5c5ab4b3a6a2d483b5e78f97588606cad50965a4' => 
     array (
       0 => '\\wamp\\www\\banp\\nobelba_data\\Smarty\\templates\\index.tpl',
+<<<<<<< HEAD
       1 => 1460035356,
+=======
+      1 => 1460108804,
+>>>>>>> origin/Dev-Branch
       2 => 'file',
     ),
   ),
@@ -129,7 +137,81 @@ function radioWithText(d) {
 >
 <!-- For Radio Button End -->
 
-
+ <!-- For Graph Start-->
+ <?php echo '<script'; ?>
+ type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"><?php echo '</script'; ?>
+>
+		
+		<?php echo '<script'; ?>
+ type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Historic World Population by Region'
+        },
+        subtitle: {
+            text: 'Source: <a href="https://en.wikipedia.org/wiki/World_population">Wikipedia.org</a>'
+        },
+        xAxis: {
+            categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Population (millions)',
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            valueSuffix: ' millions'
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            x: -40,
+            y: 80,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+            shadow: true
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: 'Year 1800',
+            data: [107, 31, 635, 203, 2]
+        }, {
+            name: 'Year 1900',
+            data: [133, 156, 947, 408, 6]
+        }, {
+            name: 'Year 2012',
+            data: [1052, 954, 4250, 740, 38]
+        }]
+    });
+});
+		<?php echo '</script'; ?>
+>
+ 
+ 
+  <!-- For Graph End-->
    
 </head>
 <body >
@@ -455,6 +537,7 @@ function radioWithText(d) {
                 <h2 class="page-header">Our Mission</h2>
             </div>
             <div class="col-md-6">
+<<<<<<< HEAD
 			<?php echo '<script'; ?>
  src="https://code.highcharts.com/highcharts.js"><?php echo '</script'; ?>
 >
@@ -467,6 +550,14 @@ function radioWithText(d) {
 			   
 			   
             </div>
+=======
+               <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+			   
+			   
+			   
+			   
+			   </div>
+>>>>>>> origin/Dev-Branch
             <div class="col-md-6">
                 <img class="img-responsive" src="http://placehold.it/700x450" alt="">
             </div>
@@ -542,7 +633,15 @@ function radioWithText(d) {
  
 
     </div>
-   
+	
+	<!-- For Graph Start -->
+   <?php echo '<script'; ?>
+ src="https://code.highcharts.com/highcharts.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="https://code.highcharts.com/modules/exporting.js"><?php echo '</script'; ?>
+>
+<!-- For Graph End -->
 
 </body>
      <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
