@@ -60,6 +60,15 @@
 	  //$sigdiv.jSignature("setData", "data:" + datapair.join(",")) 
    }
    
+   if(validator == 2) {
+      $('.nav-tabs a[href="#thankyou"]').tab('show');
+	 
+	  
+	  
+	  
+	  
+   }
+   
 }
 
 function unloadBye(){
@@ -507,10 +516,11 @@ Thank You!
 	  
 	  <a class="btn next" id="b2">Back</a>
 	  
-	   <a class="btn next" id="a3">Continue</a> 
+	   <a class="btn btn-success" id="a3">Continue</a> 
     </div>
     <div id="thankyou" class="tab-pane fade">
       <h3>Thank You</h3>
+	  
       <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 	   <a class="btn next" id="b3">Back</a>
     </div>
@@ -608,7 +618,9 @@ $("#a2").click(function(){
 });
 
 $("#a3").click(function(){
-	$('.nav-tabs a[href="#thankyou"]').tab('show')
+//	$('.nav-tabs a[href="#thankyou"]').tab('show')
+ document.myform.validate.value = 2;
+  document.myform.submit();
 });
 $("#b1").click(function(){
 	$('.nav-tabs a[href="#terms"]').tab('show')

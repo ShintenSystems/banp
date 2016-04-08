@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-07 11:17:47
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-04-08 09:31:33
          compiled from "\wamp\www\banp\nobelba_data\Smarty\templates\createnomination.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:302285700b481003169-96525407%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd42edba2a0b6bb919782f87d59fcd5a4ca7ef815' => 
     array (
       0 => '\\wamp\\www\\banp\\nobelba_data\\Smarty\\templates\\createnomination.tpl',
-      1 => 1460020664,
+      1 => 1460100678,
       2 => 'file',
     ),
   ),
@@ -107,6 +107,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	  // alert(datastr);
 	  //$('#signature_confirm').val(datastr);
 	  //$sigdiv.jSignature("setData", "data:" + datapair.join(",")) 
+   }
+   
+   if(validator == 2) {
+      $('.nav-tabs a[href="#thankyou"]').tab('show');
+	 
+	  
+	  
+	  
+	  
    }
    
 }
@@ -575,10 +584,11 @@ Thank You!
 	  
 	  <a class="btn next" id="b2">Back</a>
 	  
-	   <a class="btn next" id="a3">Continue</a> 
+	   <a class="btn btn-success" id="a3">Continue</a> 
     </div>
     <div id="thankyou" class="tab-pane fade">
       <h3>Thank You</h3>
+	  
       <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 	   <a class="btn next" id="b3">Back</a>
     </div>
@@ -677,7 +687,9 @@ $("#a2").click(function(){
 });
 
 $("#a3").click(function(){
-	$('.nav-tabs a[href="#thankyou"]').tab('show')
+//	$('.nav-tabs a[href="#thankyou"]').tab('show')
+ document.myform.validate.value = 2;
+  document.myform.submit();
 });
 $("#b1").click(function(){
 	$('.nav-tabs a[href="#terms"]').tab('show')
